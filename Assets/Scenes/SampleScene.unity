@@ -274,7 +274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _settings:
     ballRadius: 0.5
-    force: 3
+    force: 2
     deltaTime: 0
 --- !u!4 &498783659
 Transform:
