@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3562675}
   - component: {fileID: 3562674}
+  - component: {fileID: 3562676}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -164,10 +165,26 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 943249902}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3562676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3562673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e0b9224347ec8b45aee36e7ef458f3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jobRunner: {fileID: 943249901}
+  ball: {fileID: 1758765900}
+  meshFilter: {fileID: 1160018436}
 --- !u!1001 &231595875
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -414,6 +431,53 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &943249900
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 943249902}
+  - component: {fileID: 943249901}
+  m_Layer: 0
+  m_Name: MoveVertexDownJob
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &943249901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943249900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5828774ad4c35ac469574173a4a9064d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings:
+    ballYOffset: -0.01
+    ballRadius: 0.5
+    edgeDistance: 0.1
+--- !u!4 &943249902
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943249900}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3562675}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,28 +561,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 16.393, y: 0, z: 0}
---- !u!1 &1160018432 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -8391222552659086748, guid: e58656ab0262feb4db2175c69a1b663a, type: 3}
-  m_PrefabInstance: {fileID: 231595875}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1160018434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1160018432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e0b9224347ec8b45aee36e7ef458f3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ballYOffset: 0.01
-  ballRadius: 0.5
-  edgeDistance: 0.1
-  ball: {fileID: 1758765900}
-  meshFilter: {fileID: 1160018436}
 --- !u!33 &1160018436 stripped
 MeshFilter:
   m_CorrespondingSourceObject: {fileID: 5334037119324981776, guid: e58656ab0262feb4db2175c69a1b663a, type: 3}
