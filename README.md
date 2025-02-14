@@ -1,4 +1,7 @@
-# Mesh Deformation using Jobs system
+## This project has been completely overhauled and now serves as a part of my CV to show some of the code practices that I use.
+
+
+Mesh Deformation using Jobs system
 Sample for calculating mesh vertices position using Jobs System.
 Can be used to create snow deformation under feet, for example.
 
